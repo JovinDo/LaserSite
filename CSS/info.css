@@ -1,0 +1,25 @@
+@import url('./general.css');
+
+.info{
+  display: flex;
+  align-items: center;
+  padding: 0rem 3.5rem;
+  background-color: var(--darkB);
+}
+
+.info-left-side{
+  flex: 1;
+  display: flex;
+  justify-content: left;
+  color: white;
+  font-size: 0.625rem;
+}
+
+.info-right-side{
+  display: flex;
+  justify-content: right;
+}
+
+.info-images{
+  height: 2.5rem;
+}

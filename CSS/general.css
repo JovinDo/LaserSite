@@ -1,0 +1,27 @@
+:root{
+  --main: #9d796b;
+  --darkB: #5a3f36;
+  --blushN: rgb(245, 235, 225);
+  --beigeSR: #ead8ce;
+  --clayM: #c4a89d;
+}
+
+html, body{
+  height: fit-content;
+  margin: 0;
+  padding: 0;
+}
+
+body{
+  font-family: "Lato", Arial;
+
+  min-height: 100dvh;
+
+  display: flex;
+  flex-direction: column;
+}
+
+.main{
+  flex: 1;
+}
+
