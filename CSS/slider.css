@@ -60,3 +60,73 @@ body{
 .content-body{
   font-size: 1.25rem;
 }
+
+/* --- Mobile Responsive Slider Styles --- */
+@media only screen and (max-width: 768px) {
+  
+  /* 1. Adjust the Container */
+  .intro-slideshow {
+    height: 91vh; /* Keep it full height */
+    justify-content: center; /* Helps center the vertical stack */
+  }
+
+  /* 2. Center the Slide Wrapper */
+  .slide {
+    width: 100%;
+    height: auto; /* Let height grow with content */
+    
+    /* Override desktop positioning */
+    right: 0 !important; 
+    left: 0 !important;
+    top: 50%;
+    transform: translateY(-50%); /* Perfectly center vertically */
+    
+    /* Stack content vertically */
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+  }
+
+  /* 3. Stop the animation from moving it off-center */
+  .slide.showing {
+    right: 0 !important;
+  }
+
+  /* 4. Center the Image */
+  .rev-imgs {
+    position: static; /* Stop floating to the right */
+    height: auto;
+    max-height: 40vh; /* Limit height so it fits on screen */
+    width: auto;
+    max-width: 80%;   /* Prevent it from touching edges */
+    
+    margin: 2rem auto 0 auto; /* Add space on top, center horizontally */
+    object-fit: contain;
+  }
+
+  /* 5. Adjust Text Width */
+  .content {
+    width: 90%;
+    margin: 0 auto;
+  }
+
+  .content-header {
+    font-size: 2.5rem; /* Slightly smaller for mobile */
+  }
+
+  /* 6. Style the flower as a subtle background */
+  .flower-pic {
+    display: block;
+    position: absolute;
+    
+    /* CHANGE THIS: Move it up from 50% to 30% */
+    top: 20%; 
+    left: 50%;
+    transform: translate(-50%, -50%);
+    
+    /* Optional: Make it slightly larger or more opaque if you want it clearer */
+    width: 90%; 
+    max-width: 400px;
+  }
+}

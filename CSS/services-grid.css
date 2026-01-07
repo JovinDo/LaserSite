@@ -28,11 +28,15 @@
   font-weight: bold;
   font-size: 1.125rem;
   padding: 1rem 0;
+
+  text-align: center;
 }
 
 .greeting-words{
   padding: 0.25rem;
   color: black;
+
+  text-align: center;
 }
 
 .divider{
@@ -104,4 +108,29 @@
 .service-img-box{
   height: 10rem;
   width: 13rem;
+}
+
+/* --- Mobile Responsive Styles --- */
+@media only screen and (max-width: 900px) {
+  .services-grid {
+    height: auto; /* Allow height to grow with content */
+    padding-bottom: 2rem;
+  }
+
+  .services {
+    grid-template-columns: 1fr; /* Switch to 1 column */
+    row-gap: 2rem;
+    margin: 0 2rem;
+  }
+
+  .service-img-box {
+    width: 100%; /* Image takes full width of the container */
+    max-width: 20rem; /* But doesn't get too huge */
+    height: 15rem;
+  }
+  
+  .greeting-words {
+    text-align: center;
+    padding: 0 1rem;
+  }
 }

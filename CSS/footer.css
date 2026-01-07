@@ -44,3 +44,26 @@
   font-size: 0.625rem;
   color: white;
 }
+
+/* --- Mobile Responsive Styles --- */
+@media only screen and (max-width: 768px) {
+  .footer {
+    height: auto;
+    flex-direction: column;
+    padding: 2rem 0;
+    text-align: center;
+  }
+
+  .footer-left-side, 
+  .footer-right-side {
+    position: static; /* Remove absolute positioning */
+    width: 100%;
+    padding: 1rem 0;
+    align-items: center; /* Center align items */
+  }
+  
+  .footer-section-title{
+    font-size: 1.1rem;
+    margin-bottom: 0.5rem;
+  }
+}
