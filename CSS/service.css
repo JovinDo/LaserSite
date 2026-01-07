@@ -242,3 +242,95 @@ input[type="checkbox"]{
 .highlighted{
   background-color: var(--beigeSR);
 }
+
+/* --- Mobile Responsive Styles for Service Pages --- */
+@media only screen and (max-width: 768px) {
+  
+  /* 1. Reset the side margins so content fits */
+  .margin {
+    margin-left: 1.5rem;
+    margin-right: 1.5rem;
+  }
+
+  /* 2. Fix the Hero Section (Title size) */
+  .service-hero-title {
+    font-size: 2.5rem; /* Smaller font */
+    text-align: center;
+    padding: 0 1rem;
+  }
+  
+  .service-hero-body {
+    font-size: 1.2rem;
+    text-align: center;
+    padding: 0 1rem;
+  }
+
+  /* 3. Stack Content Vertically (Images above Text) */
+  .service-content {
+    flex-direction: column; /* Stacks items instead of side-by-side */
+    gap: 2rem; /* Adds space between the stacked items */
+    padding: 2rem 0;
+  }
+
+  /* 4. Fix Widths of Split Sections */
+  .service-content-left, 
+  .service-content-right {
+    width: 100%;
+    padding: 0 1rem; /* Add padding so text doesn't touch screen edge */
+    box-sizing: border-box;
+    text-align: center; /* Optional: centers text for mobile look */
+  }
+
+  /* 5. Fix the Image Sizing */
+  .serv-img {
+    width: 100%;
+    max-width: 500px; /* Prevents it from getting too huge */
+    height: auto;
+    border-radius: 0.5rem; /* Optional: adds rounded corners */
+  }
+
+  /* 6. Fix the "Border" Boxes (The 4-item grid) */
+  .border {
+    width: 90%; /* Make boxes fill the screen width */
+    margin-bottom: 1rem;
+    box-sizing: border-box; /* Ensures padding doesn't break width */
+  }
+
+  /* 7. Fix the Accordion / FAQs */
+  .accordian {
+    width: 90%; /* Fit within the screen */
+    right: 0;   /* Remove the 'right: 2rem' shift */
+    margin: 2rem auto; /* Center it */
+    padding: 0;
+  }
+
+  .accordian li {
+    width: 100%; /* List items fill the container */
+    margin: 1rem 0; /* Adjust spacing */
+    box-sizing: border-box;
+  }
+
+  .accordian li label {
+    font-size: 1rem; /* Slightly smaller text */
+  }
+  
+  /* 8. Fix Paragraph Text Alignment */
+  .service-content-body {
+    text-align: left;
+    padding: 0.5rem 0;
+  }
+
+  /* 1. Target the FIRST box (General Info) -> Center the text */
+  .service-content .border:first-child .service-content-body {
+    text-align: center;
+  }
+
+  /* 2. Target the SECOND box (The List) -> Left align the text */
+  .service-content .border:last-child .service-content-body {
+    text-align: left;
+    
+    /* Optional: Ensure the list uses the full width so bullets aren't squished */
+    width: 100%; 
+    padding-left: 1rem; /* indent slightly from the edge */
+  }
+}
