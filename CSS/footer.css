@@ -4,7 +4,7 @@
   flex-shrink: 0;
 
   width: 100%;
-  height: 7rem;
+  height: 11rem;
   background-color: var(--darkB);
 
   display: flex;
@@ -35,14 +35,43 @@
   color: white;
 
   text-transform: uppercase;
-  font-size: 1rem;
+  font-size: 1.5rem;
 
   padding-bottom: 0.25rem;
 }
 
 .footer-content{
-  font-size: 0.625rem;
+  font-size: 0.8rem;
   color: white;
+  line-height: 1.6; /* Adds breathing room between lines */
+}
+
+/* --- Center the Socials on Desktop --- */
+.footer-socials {
+  /* Places the div in the exact middle of the footer */
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  
+  display: flex;
+  gap: 1.5rem; /* Spacing between icons */
+  align-items: center;
+}
+
+.social-icon {
+  height: 2rem;
+  width: 2rem;
+  object-fit: contain;
+  cursor: pointer;
+  transition: transform 0.2s ease;
+  
+  /* OPTIONAL: Uncomment the line below if your icons are black 
+     and you want them to be white to match the footer text */
+  filter: invert(1) brightness(100);
+}
+
+.social-icon:hover {
+  transform: scale(1.2); /* Slight zoom on hover */
 }
 
 /* --- Mobile Responsive Styles --- */
@@ -65,5 +94,12 @@
   .footer-section-title{
     font-size: 1.1rem;
     margin-bottom: 0.5rem;
+  }
+
+  /* Reset the positioning so it stacks vertically on phones */
+  .footer-socials {
+    position: static;
+    transform: none;
+    margin: 1.5rem 0; /* Adds breathing room between sections */
   }
 }
