@@ -28,6 +28,11 @@
   color: white;
 }
 
+/* Removes the underline from the 'Book Now' link in the hero image */
+.service-hero a {
+  text-decoration: none;
+}
+
 .service-description{
   display: flex;
   flex-direction: column;

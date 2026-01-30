@@ -88,6 +88,11 @@
   background-color: var(--main);
  }
 
+/* Removes the underline from the link wrapping your appointment button */
+.header-right-side a {
+  text-decoration: none;
+}
+
  /* --- Dropdown Menu Styles --- */
 
 /* The container <li> */
