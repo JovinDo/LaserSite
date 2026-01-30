@@ -148,11 +148,11 @@
 .service-content-body{
   font-size: 0.9rem;
   padding: 0.25rem;
-  text-align: justify;
-  text-justify: inter-word;
+  text-align: left;
   font-weight: 300;
 
   line-height: 2;
+  width: 100%;
 }
 
 
@@ -241,6 +241,8 @@ input[type="checkbox"]{
 
 .highlighted{
   background-color: var(--beigeSR);
+  /* ADD THIS LINE: */
+  width: 100%;
 }
 
 /* --- Mobile Responsive Styles for Service Pages --- */
@@ -250,6 +252,12 @@ input[type="checkbox"]{
   .margin {
     margin-left: 1.5rem;
     margin-right: 1.5rem;
+  }
+
+  /* ADD THIS to fix the zoomed-in images */
+  .service-hero {
+    height: 50vh; /* Reduces height so the image doesn't have to zoom as much */
+    background-position: center; /* Ensures the middle of the photo is visible */
   }
 
   /* 2. Fix the Hero Section (Title size) */
