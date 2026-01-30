@@ -10,6 +10,9 @@ html, body{
   height: fit-content;
   margin: 0;
   padding: 0;
+
+  /* Was 125%. Changed to 112.5% (approx 18px) for a better balance */
+  font-size: 112.5%;
 }
 
 body{

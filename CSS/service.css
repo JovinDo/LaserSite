@@ -333,4 +333,18 @@ input[type="checkbox"]{
     width: 100%; 
     padding-left: 1rem; /* indent slightly from the edge */
   }
+
+  .services {
+    grid-template-columns: 1fr;
+    row-gap: 2rem;
+    
+    /* CHANGE THIS: 
+       1. Use 'auto' for left/right to force centering.
+       2. Use a specific max-width to keep it contained.
+       3. Use a smaller padding (0.5rem) so it doesn't touch the edges. 
+    */
+    margin: 0 auto; 
+    padding: 0 1rem; 
+    max-width: 20rem; /* Matches your image max-width */
+  }
 }
