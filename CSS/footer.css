@@ -11,6 +11,13 @@
   align-items: center;
 }
 
+/* Keeps the phone number white */
+footer a[href^="tel:"], 
+.phone-link {
+    color: white !important; /* Forces it to be white */
+    text-decoration: none;   /* Removes the underline (optional) */
+}
+
 .footer-right-side{
   position: absolute;
   right: 0;
